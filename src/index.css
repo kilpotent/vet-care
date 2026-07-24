@@ -1,0 +1,177 @@
+/* blue color: #1038E0 */
+/* pink color: #FFCACA */
+
+@font-face {
+  font-family: "AcidThick";
+  src: url("./assets/fonts/AC-THICKSTICK_UNICODE.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FutureBold";
+  src: url("./assets/fonts/FutureBold.TTF") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FutureItalic";
+  src: url("./assets/fonts/FutureItalic.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Future";
+  src: url("./assets/fonts/UB45RUN.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.mb-3 {
+  font-family: "Future";
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #1038e0;
+}
+
+.custom-navbar {
+  border-radius: 50px;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  /* ΔΕΝ γράφουμε width ούτε margin πια — 
+     τα top/left/right ΜΑΖΙ καθορίζουν αυτόματα και το πλάτος:
+     "ξεκίνα 16px από αριστερά, σταμάτα 16px πριν τη δεξιά άκρη".
+     Ο browser υπολογίζει μόνος του το ακριβές πλάτος ανάμεσά τους. */
+}
+.nav-item {
+  transition: background-color 0.3s ease;
+  border-radius: 30px;
+}
+
+.nav-item:hover {
+  background-color: white;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+}
+
+.hero-text-box {
+  bottom: 60px;
+  left: 0;
+  padding: 0 60px;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-family: "AcidThick";
+  font-size: 6rem;
+  color: #ffcaca;
+  line-height: 1.1;
+  position: relative; /* ο "καμβάς" για το paw icon */
+}
+
+.hero-subtitle {
+  color: #ffcaca;
+  font-size: 1.3rem;
+  font-family: "Future";
+  letter-spacing: 0.5px;
+}
+
+.hero-paw {
+  width: 80px;
+  height: 80px;
+  transform: rotate(-15deg);
+  vertical-align: middle;
+}
+
+/* ============================================
+   MEDIA QUERY: οθόνες ΜΕΧΡΙ 768px πλάτους (κινητά/μικρά tablet)
+   ============================================
+   "max-width: 768px" σημαίνει "αυτό το block ΙΣΧΥΕΙ μόνο αν το
+   πλάτος του browser (viewport) είναι 768px Ή ΛΙΓΟΤΕΡΟ".
+   768px είναι ένα πολύ συνηθισμένο breakpoint - ταιριάζει περίπου
+   με το πλάτος ενός tablet σε κάθετη στάση, και όλα τα κινητά
+   είναι στενότερα από αυτό.
+
+   ΟΤΙ ΓΡΑΨΕΙΣ ΕΔΩ ΜΕΣΑ "ΝΙΚΑΕΙ" (overrides) τους παραπάνω κανόνες,
+   ΑΛΛΑ ΜΟΝΟ όταν η οθόνη είναι τόσο στενή. Σε desktop, οι κανόνες
+   αυτού του block αγνοούνται εντελώς.
+*/
+@media (max-width: 768px) {
+  .hero-image {
+    height: 60vh; /* μικρότερο ύψος - δεν χρειάζεται τόσο "ψηλή" εικόνα σε στενή οθόνη */
+  }
+
+  .hero-text-box {
+    bottom: 24px;
+    padding: 0 20px; /* πολύ μικρότερο padding - χρειαζόμαστε τον χώρο για το κείμενο */
+    max-width: 100%; /* το κείμενο μπορεί να πιάσει όλο το πλάτος σε στενή οθόνη */
+  }
+
+  .hero-title {
+    font-size: 2.2rem; /* πολύ μικρότερο - αλλιώς δεν χωράει σε 380px πλάτος */
+  }
+
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .hero-paw {
+    width: 36px;
+    height: 36px;
+    right: 20px;
+    top: 10px;
+  }
+}
+.footer-divider {
+  border-right: 1px solid white;
+  /* σε κινητό, όπου οι στήλες στοιβάζονται κάθετα, γραμμή από κάτω */
+}
+
+@media (min-width: 992px) {
+  .footer-divider {
+    border-bottom: none;
+    border-right: 2px solid white;
+    /* σε desktop (992px+), αλλάζει σε κάθετη γραμμή δεξιά */
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 10px;
+  height: 230px;
+  width: 75%;
+  margin: 0 auto; /* κεντράρει το card μέσα στο grid cell */
+  padding: 20px;
+}
+
+/* Σε tablet, 2 στήλες αντί για 3 */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Σε κινητό, 1 στήλη (στοίβα) */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
