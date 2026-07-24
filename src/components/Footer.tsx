@@ -6,15 +6,8 @@ function Footer(): React.JSX.Element {
     <footer style={{ backgroundColor: "#FFCACA" }} className="py-1">
       <div className="container">
         <div className="d-flex flex-wrap gap-5">
-          <div
-            className="d-flex align-items-center justify-content-center py-4 px-4"
-            style={{ flexShrink: 0, width: "280px" }}
-          >
-            <img
-              src={logo}
-              alt="Vet Care λογότυπο"
-              style={{ height: "110px" }}
-            />
+          <div className="footer-logo-wrapper d-flex align-items-center justify-content-center py-4 px-4">
+            <img src={logo} alt="Vet Care λογότυπο" className="footer-logo" />
           </div>
 
           <div
@@ -49,7 +42,7 @@ function Footer(): React.JSX.Element {
               </ul>
             </div>
 
-            <div className="py-4">
+            <div className="py-2 px-4">
               <h6 className="fw-bold mb-3" style={{ color: "#1038E0" }}>
                 ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ
               </h6>

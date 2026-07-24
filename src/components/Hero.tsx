@@ -9,22 +9,10 @@ function Hero(): React.JSX.Element {
         src={heroImage}
         alt="Χρυσό retriever και γάτα, φροντίδα κατοικιδίων"
         className="w-100 hero-image"
-        style={{ objectFit: "cover", objectPosition: "center 20%" }}
+        style={{ objectFit: "cover" }}
       />
-      {/*
-        ΑΛΛΑΓΗ: αφαίρεσα το height:"900px" από το inline style, και
-        πρόσθεσα την κλάση "hero-image". Το ΥΨΟΣ θα το ορίσουμε τώρα
-        μέσα στο CSS αρχείο, όπου ΜΠΟΡΟΥΜΕ να γράψουμε media queries.
-        Το objectFit/objectPosition τα αφήνω inline γιατί ΔΕΝ χρειάζεται
-        να αλλάζουν ανά μέγεθος οθόνης - παραμένουν πάντα ίδια.
-      */}
 
       <div className="position-absolute hero-text-box">
-        {/*
-          ΑΛΛΑΓΗ: αφαίρεσα το style={{bottom, padding, maxWidth}} και
-          το αντικατέστησα με την κλάση "hero-text-box". Αυτά τα 3
-          θέλουμε να αλλάζουν ανά μέγεθος οθόνης, άρα πάνε στο CSS.
-        */}
         <h1 className="hero-title d-flex align-items-start flex-wrap">
           <span>
             Φροντίδα που αξίζει

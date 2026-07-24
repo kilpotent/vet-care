@@ -64,6 +64,7 @@ body {
 .hero-image {
   width: 100%;
   height: 100vh;
+  object-position: center 20%;
 }
 
 .hero-text-box {
@@ -95,6 +96,16 @@ body {
   vertical-align: middle;
 }
 
+.footer-logo {
+  height: 130px;
+  width: auto;
+}
+
+.footer-logo-wrapper {
+  width: 280px;
+  flex-shrink: 0;
+}
+
 /* ============================================
    MEDIA QUERY: οθόνες ΜΕΧΡΙ 768px πλάτους (κινητά/μικρά tablet)
    ============================================
@@ -110,7 +121,8 @@ body {
 */
 @media (max-width: 768px) {
   .hero-image {
-    height: 60vh; /* μικρότερο ύψος - δεν χρειάζεται τόσο "ψηλή" εικόνα σε στενή οθόνη */
+    height: 50vh;
+    object-position: 70% 20%;
   }
 
   .hero-text-box {
@@ -135,15 +147,13 @@ body {
   }
 }
 .footer-divider {
-  border-right: 1px solid white;
-  /* σε κινητό, όπου οι στήλες στοιβάζονται κάθετα, γραμμή από κάτω */
+  border-right: 2px solid white;
 }
 
 @media (min-width: 992px) {
   .footer-divider {
     border-bottom: none;
     border-right: 2px solid white;
-    /* σε desktop (992px+), αλλάζει σε κάθετη γραμμή δεξιά */
   }
 }
 
@@ -167,11 +177,28 @@ body {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .footer-divider {
+    border-bottom: 2px solid white;
+    border-right: none;
+  }
 }
 
 /* Σε κινητό, 1 στήλη (στοίβα) */
 @media (max-width: 576px) {
   .services-grid {
     grid-template-columns: 1fr;
+  }
+
+  .footer-logo {
+    width: auto;
+    height: 80px;
+    display: block;
+  }
+
+  .footer-logo-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
