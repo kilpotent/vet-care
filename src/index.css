@@ -181,6 +181,10 @@ body {
     border-bottom: 2px solid white;
     border-right: none;
   }
+
+  .schedule-infom .footer-divider {
+    padding: 0 0.5rem !important;
+  }
 }
 
 /* Σε κινητό, 1 στήλη (στοίβα) */

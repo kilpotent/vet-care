@@ -32,13 +32,6 @@ function Navbar(): React.JSX.Element {
           aria-expanded="false"
           aria-label="Εναλλαγή πλοήγησης"
         >
-          {/*
-            ΔΙΑΦΟΡΑ #2: Σε TypeScript/React, το JSX είναι αυστηρότερο με τα
-            attributes ενός <button>. Πρόσθεσα aria-controls, aria-expanded,
-            aria-label — αυτά δεν είναι υποχρεωτικά για να "τρέξει" ο κώδικας,
-            αλλά είναι σωστή πρακτική προσβασιμότητας (accessibility) που
-            καλό είναι να συνηθίσεις από νωρίς.
-          */}
           <span className="navbar-toggler-icon"></span>
         </button>
 
@@ -78,7 +71,7 @@ function Navbar(): React.JSX.Element {
             <li className="nav-item">
               <a
                 className="nav-link fw-bold"
-                href="#contact"
+                href="#footer"
                 style={{ color: "#1038E0" }}
               >
                 ΕΠΙΚΟΙΝΩΝΙΑ

@@ -3,7 +3,7 @@ import logo from "../assets/images/logo.png";
 
 function Footer(): React.JSX.Element {
   return (
-    <footer style={{ backgroundColor: "#FFCACA" }} className="py-1">
+    <footer style={{ backgroundColor: "#FFCACA" }} className="py-1" id="footer">
       <div className="container">
         <div className="d-flex flex-wrap gap-5">
           <div className="footer-logo-wrapper d-flex align-items-center justify-content-center py-4 px-4">
@@ -14,7 +14,7 @@ function Footer(): React.JSX.Element {
             className="d-flex flex-wrap gap-5"
             style={{ marginLeft: "auto" }}
           >
-            <div className="flex-fill py-4 footer-divider px-4">
+            <div className="flex-fill py-4 footer-divider px-4 ">
               <h6 className="fw-bold mb-3" style={{ color: "#1038E0" }}>
                 ΣΤΟΙΧΕΙΑ ΕΠΙΚΟΙΝΩΝΙΑΣ
               </h6>
@@ -42,7 +42,7 @@ function Footer(): React.JSX.Element {
               </ul>
             </div>
 
-            <div className="py-2 px-4">
+            <div className="py-4 px-4 schedule-info">
               <h6 className="fw-bold mb-3" style={{ color: "#1038E0" }}>
                 ΩΡΑΡΙΟ ΛΕΙΤΟΥΡΓΙΑΣ
               </h6>
