@@ -44,15 +44,6 @@ function Navbar(): React.JSX.Element {
             <li className="nav-item">
               <a
                 className="nav-link fw-bold"
-                href="#home"
-                style={{ color: "#1038E0" }}
-              >
-                ΑΡΧΙΚΗ
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
-                className="nav-link fw-bold"
                 href="#services"
                 style={{ color: "#1038E0" }}
               >
